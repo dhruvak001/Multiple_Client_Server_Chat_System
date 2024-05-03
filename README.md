@@ -1,11 +1,14 @@
-#Multiple Client-Server Chat system using Socket Programming
+# Multiple Client-Server Chat system using Socket Programming
+
 The system allows multiple clients to connect to a central server and exchange messages in a group chat or engage in private conversations.
 
-##File Description:
+## File Description:
+
 * Client.py: This file contains the implementation of the client-side application. It provides a graphical user interface (GUI) using Tkinter for users to login, view the chat interface, send messages to all users, and initiate private conversations with specific users.
 * Server.py: This file contains the implementation of the server-side application. It listens for incoming connections from clients, maintains a list of connected clients, and facilitates message broadcasting among clients. Additionally, it provides functionality to send updated user lists to all clients.
 
-##Features:
+## Features:
+
 ● LoginSystem:Userscanentertheirnamestologintothe
 chat system.
 ● GroupChat:Userscansendmessagesthatarebroadcasted
@@ -14,72 +17,74 @@ to all connected clients.
 ● Real-timeUpdates:Theuserlistisdynamicallyupdatedto reflect the current online users.
 ● ErrorHandling:Thesystemprovideserrorhandlingforfailed connections and communication errors.
 
-##Working:
-Client Side:
+## Working:
+
+### Client Side:
 1. Initialization:
-● Theclientinitializesasocketobject(self.client)using
+- Theclientinitializesasocketobject(self.client)using
 the socket module to establish a connection with the
 server.
-● Italsoinitializesvariableslikenametostoretheuser's
+- Italsoinitializesvariableslikenametostoretheuser's
 name, connected to track the connection status, and private_chat_windows to manage private chat windows.
 2. GUI Setup:
-● Thesetup_login_gui()methodcreatesaloginwindow
+- Thesetup_login_gui()methodcreatesaloginwindow
 using Tkinter, where users can enter their name and
 click the login button.
-● Uponsuccessfullogin,thesetup_chat_gui()method
+- Uponsuccessfullogin,thesetup_chat_gui()method
 creates the main chat window, including chat history, message entry field, user list, etc.
 3. Connection to Server:
  
- ● Theconnect_to_server()methodattemptstoconnect the client to the specified server address (SERVER_HOST and SERVER_PORT).
-● Iftheconnectionissuccessful,theclientsendsthe user's name to the server for authentication and starts a separate thread (receive_messages()) to handle incoming messages asynchronously.
+- Theconnect_to_server()methodattemptstoconnect the client to the specified server address (SERVER_HOST and SERVER_PORT).
+- Iftheconnectionissuccessful,theclientsendsthe user's name to the server for authentication and starts a separate thread (receive_messages()) to handle incoming messages asynchronously.
 4. Sending and Receiving Messages:
-● Theclientsendsmessagestotheserverusingthe
+- Theclientsendsmessagestotheserverusingthe
 send_message() method, which encodes the message
 into bytes and sends it over the socket.
-● Thereceive_messages()methodcontinuouslylistensfor
+- Thereceive_messages()methodcontinuouslylistensfor
 incoming messages from the server. It decodes received messages, updates the GUI accordingly, and handles different types of messages (public messages, user list updates, private messages).
 5. Private Chat:
-● Userscaninitiateprivatechatsessionsby
+- Userscaninitiateprivatechatsessionsby
 double-clicking on a user's name in the user list.
-● Theclientmaintainsadictionary
+- Theclientmaintainsadictionary
 (private_chat_windows) to manage private chat windows and associated components (chat history, message entry).
-● Privatemessagesareprefixedwithaspecialtag ([PRIVATE MESSAGE]) before being sent to the server for proper routing.
+- Privatemessagesareprefixedwithaspecialtag ([PRIVATE MESSAGE]) before being sent to the server for proper routing.
 
 ##Server-side:
+
 1.Initialization:
-● Theserverinitializesasocketobject(server_socket)tolisten
+- Theserverinitializesasocketobject(server_socket)tolisten
 for incoming connections from clients.
-● Itmaintainsdatastructurestostoreconnectedclients,their
+- Itmaintainsdatastructurestostoreconnectedclients,their
 usernames, and manages client connections.
 2. Connection Handling:
-● Uponacceptinganewclientconnection,theservercreatesa
+- Uponacceptinganewclientconnection,theservercreatesa
 separate thread (client_thread) to handle communication
 with that client.
-● Theclient'susernameisreceivedandvalidatedbytheserver.
-● Userauthenticationensuresthateachclienthasaunique
+- Theclient'susernameisreceivedandvalidatedbytheserver.
+- Userauthenticationensuresthateachclienthasaunique
 username.
 3. Broadcasting Messages:
-● Theserverreceivesmessagesfromclientsandbroadcasts
+- Theserverreceivesmessagesfromclientsandbroadcasts
 them to all connected clients, ensuring that each message is
 prefixed with the sender's username.
-● Userlistsareperiodicallyupdatedandbroadcastedtoall
+- Userlistsareperiodicallyupdatedandbroadcastedtoall
 clients to reflect changes in online users.
 4. Private Messaging:
-● Privatemessagesareroutedthroughtheserver,which
+- Privatemessagesareroutedthroughtheserver,which
 ensures that they are only delivered to the intended recipient.
-● Theserverfacilitatesprivatecommunicationbyidentifying
+- Theserverfacilitatesprivatecommunicationbyidentifying
 the recipient and delivering the message accordingly. 5. Error Handling:
 
-● Theserverhandlesvariouserrors,suchasclient disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
+- Theserverhandlesvariouserrors,suchasclient disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
 6. Multithreading:
-● Multithreadingisemployedtohandlemultipleclient
+- Multithreadingisemployedtohandlemultipleclient
 connections concurrently, allowing the server to serve multiple clients simultaneously without blocking.
 7. Scalability and Performance:
-● Theserverarchitectureisdesignedtobescalableand
+- Theserverarchitectureisdesignedtobescalableand
 performant, capable of handling a large number of concurrent connections and efficiently managing communication between clients.
 Conclusion:
-● Theclientandservercomponentsworktogethertoenable real-time text-based communication between multiple users.
-● Theclientprovidesauser-friendlyinterfaceforinteracting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
+- Theclientandservercomponentsworktogethertoenable real-time text-based communication between multiple users.
+- Theclientprovidesauser-friendlyinterfaceforinteracting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
 
 
 For the Demo, refer to the Report.
