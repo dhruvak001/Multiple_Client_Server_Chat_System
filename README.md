@@ -49,7 +49,7 @@ double-clicking on a user's name in the user list.
 (private_chat_windows) to manage private chat windows and associated components (chat history, message entry).
 - Privatemessagesareprefixedwithaspecialtag ([PRIVATE MESSAGE]) before being sent to the server for proper routing.
 
-##Server-side:
+### Server-side:
 
 1.Initialization:
 - Theserverinitializesasocketobject(server_socket)tolisten
@@ -87,5 +87,5 @@ Conclusion:
 - Theclientprovidesauser-friendlyinterfaceforinteracting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
 
 
-For the Demo, refer to the Report.
-FortheDemovideo: https://drive.google.com/file/d/1dKGGwPipN3cnnVGk64uOzRo 0rNplaQN-/view?usp=drive_link
+For the Demo, refer to the Report.</b>
+For the Demo video: https://drive.google.com/file/d/1dKGGwPipN3cnnVGk64uOzRo 0rNplaQN-/view?usp=drive_link
