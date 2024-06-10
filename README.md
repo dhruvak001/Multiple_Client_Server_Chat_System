@@ -76,16 +76,16 @@ ensures that they are only delivered to the intended recipient.
 the recipient and delivering the message accordingly.
 
 5. Error Handling:
-- Theserverhandlesvariouserrors,suchasclient disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
+- The server handles various errors, such as client disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
 6. Multithreading:
-- Multithreadingisemployedtohandlemultipleclient
+- Multithreading is employed to handle multiple client
 connections concurrently, allowing the server to serve multiple clients simultaneously without blocking.
 7. Scalability and Performance:
-- Theserverarchitectureisdesignedtobescalableand
+- The server architecture is designed to be scalable and
 performant, capable of handling a large number of concurrent connections and efficiently managing communication between clients.
 Conclusion:
-- Theclientandservercomponentsworktogethertoenable real-time text-based communication between multiple users.
-- Theclientprovidesauser-friendlyinterfaceforinteracting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
+- The client and server components worktogether to enable real-time text-based communication between multiple users.
+- The client provides a user-friendly interface for interacting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
 
 
 
