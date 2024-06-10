@@ -9,13 +9,13 @@ The system allows multiple clients to connect to a central server and exchange m
 
 ## Features:
 
-- LoginSystem:Userscanentertheirnamestologintothe
+- Login System: Users can enter their names to log into the
 chat system.
-- GroupChat:Userscansendmessagesthatarebroadcasted
+- Group Chat: Users can send messages that are broadcasted
 to all connected clients.  
-- PrivateMessaging:Userscaninitiateprivateconversations with specific users by double-clicking on their names in the user list.
-- Real-timeUpdates:Theuserlistisdynamicallyupdatedto reflect the current online users.
-- ErrorHandling:Thesystemprovideserrorhandlingforfailed connections and communication errors.
+- Private Messaging: Users can initiate private conversations with specific users by double-clicking on their names in the user list.
+- Real-time Updates: The user list is dynamically updated to reflect the current online users.
+- Error Handling: The system provides error handling for failed connections and communication errors.
 
 ## Working:
 
