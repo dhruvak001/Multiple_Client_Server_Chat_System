@@ -21,33 +21,33 @@ to all connected clients.
 
 ### Client Side:
 1. Initialization:
-- Theclientinitializesasocketobject(self.client)using
+- The client initializes a socket object(self.client) using
 the socket module to establish a connection with the
 server.
-- Italsoinitializesvariableslikenametostoretheuser's
+- It also initializes variables like name to store the user's
 name, connected to track the connection status, and private_chat_windows to manage private chat windows.
 2. GUI Setup:
-- Thesetup_login_gui()methodcreatesaloginwindow
+- The setup_login_gui() method creates a login window
 using Tkinter, where users can enter their name and
 click the login button.
-- Uponsuccessfullogin,thesetup_chat_gui()method
+- Upon successful login,thesetup_chat_gui() method
 creates the main chat window, including chat history, message entry field, user list, etc.
 3. Connection to Server:
  
-- Theconnect_to_server()methodattemptstoconnect the client to the specified server address (SERVER_HOST and SERVER_PORT).
-- Iftheconnectionissuccessful,theclientsendsthe user's name to the server for authentication and starts a separate thread (receive_messages()) to handle incoming messages asynchronously.
+- Theconnect_to_server() method attempts to connect the client to the specified server address (SERVER_HOST and SERVER_PORT).
+- If the connection is successful, the client sends the user's name to the server for authentication and starts a separate thread (receive_messages()) to handle incoming messages asynchronously.
 4. Sending and Receiving Messages:
-- Theclientsendsmessagestotheserverusingthe
+- The client sends messages to the server using the
 send_message() method, which encodes the message
 into bytes and sends it over the socket.
-- Thereceive_messages()methodcontinuouslylistensfor
+- The receive_messages() method continuously listens for
 incoming messages from the server. It decodes received messages, updates the GUI accordingly, and handles different types of messages (public messages, user list updates, private messages).
 5. Private Chat:
-- Userscaninitiateprivatechatsessionsby
+- Users can initiate private chat sessions by
 double-clicking on a user's name in the user list.
-- Theclientmaintainsadictionary
+- The client maintains a dictionary
 (private_chat_windows) to manage private chat windows and associated components (chat history, message entry).
-- Privatemessagesareprefixedwithaspecialtag ([PRIVATE MESSAGE]) before being sent to the server for proper routing.
+- Private messages are prefixed with a specialtag ([PRIVATE MESSAGE]) before being sent to the server for proper routing.
 
 ### Server-side:
 
