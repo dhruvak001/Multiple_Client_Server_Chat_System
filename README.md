@@ -83,7 +83,7 @@ connections concurrently, allowing the server to serve multiple clients simultan
 7. Scalability and Performance:
 - The server architecture is designed to be scalable and
 performant, capable of handling a large number of concurrent connections and efficiently managing communication between clients.
-Conclusion:
+## Conclusion:
 - The client and server components worktogether to enable real-time text-based communication between multiple users.
 - The client provides a user-friendly interface for interacting with the chat system, while the server manages the underlying communication infrastructure and facilitates message routing between clients.
 
