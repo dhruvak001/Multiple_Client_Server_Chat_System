@@ -52,29 +52,30 @@ double-clicking on a user's name in the user list.
 ### Server-side:
 
 1.Initialization:
-- Theserverinitializesasocketobject(server_socket)tolisten
+- The server initializes a socket object(server_socket) to listen
 for incoming connections from clients.
-- Itmaintainsdatastructurestostoreconnectedclients,their
+- It maintains data structures to store connected clients, their
 usernames, and manages client connections.
 2. Connection Handling:
-- Uponacceptinganewclientconnection,theservercreatesa
+- Upon accepting a new client connection, the server creates a
 separate thread (client_thread) to handle communication
 with that client.
-- Theclient'susernameisreceivedandvalidatedbytheserver.
-- Userauthenticationensuresthateachclienthasaunique
+- The client's username is received and validated by the server.
+- User authentication ensures that each client has a unique
 username.
 3. Broadcasting Messages:
-- Theserverreceivesmessagesfromclientsandbroadcasts
+- The server receives messages from client sand broadcasts
 them to all connected clients, ensuring that each message is
 prefixed with the sender's username.
-- Userlistsareperiodicallyupdatedandbroadcastedtoall
+- User lists are periodically updated and broadcasted to all
 clients to reflect changes in online users.
 4. Private Messaging:
-- Privatemessagesareroutedthroughtheserver,which
+- Private messages are routed through the server,which
 ensures that they are only delivered to the intended recipient.
-- Theserverfacilitatesprivatecommunicationbyidentifying
-the recipient and delivering the message accordingly. 5. Error Handling:
+- The server facilitates private communication by identifying
+the recipient and delivering the message accordingly.
 
+5. Error Handling:
 - Theserverhandlesvariouserrors,suchasclient disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
 6. Multithreading:
 - Multithreadingisemployedtohandlemultipleclient
