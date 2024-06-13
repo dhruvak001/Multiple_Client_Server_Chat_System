@@ -77,8 +77,8 @@ the recipient and delivering the message accordingly.
 
 5. Error Handling:
 - The server handles various errors, such as client disconnection, connection timeouts, and exceptions during message handling, to ensure robustness and reliability.
-6. Multithreading:
-- Multithreading is employed to handle multiple client
+6. Multi-threading:
+- Multi-threading is employed to handle multiple client
 connections concurrently, allowing the server to serve multiple clients simultaneously without blocking.
 7. Scalability and Performance:
 - The server architecture is designed to be scalable and
