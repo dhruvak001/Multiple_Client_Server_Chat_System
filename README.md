@@ -10,7 +10,7 @@ The system allows multiple clients to connect to a central server and exchange m
 ## Features:
 
 - Login System: Users can enter their names to log into the
-chat system.
+chat system
 - Group Chat: Users can send messages that are broadcasted
 to all connected clients.  
 - Private Messaging: Users can initiate private conversations with specific users by double-clicking on their names in the user list.
