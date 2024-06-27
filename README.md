@@ -9,7 +9,7 @@ The system allows multiple clients to connect to a central server and exchange m
 
 ## Features:
 
-- Login System: Users can enter their names to log into the
+- Login System: Users can enter their names to log into th
 chat system.
 - Group Chat: Users can send messages that are broadcasted
 to all connected clients.  
