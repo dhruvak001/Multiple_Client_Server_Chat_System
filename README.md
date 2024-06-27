@@ -1,6 +1,6 @@
 # Multiple Client-Server Chat system using Socket Programming
 
-The system allows multiple clients to connect to a central server and exchange messages in a group chat or engage in private conversations.
+The system allows multiple clients to connect to a central server and exchange messages in a group chat or engage in private conversations
 
 ## File Description:
 
